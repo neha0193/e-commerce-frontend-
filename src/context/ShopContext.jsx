@@ -8,6 +8,18 @@ const ShopContextProvider = (props) => {
   const delivery_fee = 50;
   const [search,setSearch] =useState('')
   const [showSearch, setShowSearch] = useState(false)
+  // creating add to cart feature
+  // const [cartItems,setCartItems]= useState({})
+   
+  // const AddToCart = async(itemId,size) =>{
+  //   let cartData = structuredClone (cartItems)
+  //   if (cartData[itemId]) {
+  //     if (cartData[itemId][size]) {
+        
+  //     }
+      
+  //   }
+  // }
 
   const value = {
     products,
