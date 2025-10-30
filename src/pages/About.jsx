@@ -34,7 +34,7 @@ const About = () => {
             to make shopping an inspiring experience, where quality, creativity,
             and consciousness come together seamlessly.
           </p>
-          <b className="text-gray-800">Our Mission</b>
+          <b className="text-gray-800 text-lg">Our Mission</b>
           <p>
             At Paridhan, our mission is to redefine everyday fashion through
             authenticity and purpose. We aim to create clothing that empowers
@@ -51,7 +51,7 @@ const About = () => {
       </div>
       <div className="flex flex-col md:flex-row text-sm mb-20">
         <div className="border px-10 md:px-16 py-8 sm:py-20 flex flex-col gap-5">
-          <b> 💫 Quality Assurance :</b>
+          <b className="text-lg"> 💫 Quality Assurance :</b>
           <p className="text-gray-600">
             Every Paridhan garment is crafted with care, premium fabrics, and
             precise stitching to guarantee lasting comfort and quality.
@@ -59,7 +59,7 @@ const About = () => {
         </div>
 
         <div className="border px-10 md:px-16 py-8 sm:py-20 flex flex-col gap-5">
-          <b> 🌸 Convenience :</b>
+          <b className="text-lg"> 🌸 Convenience :</b>
           <p className="text-gray-600">
             Paridhan offers easy online shopping with secure payments, quick
             delivery, and smooth browsing for a hassle-free experience.
@@ -67,7 +67,7 @@ const About = () => {
         </div>
 
         <div className="border px-10 md:px-16 py-8 sm:py-20 flex flex-col gap-5">
-          <b> ✨ Exceptional Customer Service :</b>
+          <b className="text-lg"> ✨ Exceptional Customer Service :</b>
           <p className="text-gray-600">
             Our team ensures fast, helpful support for orders, returns, and
             styling advice, keeping every customer satisfied and valued.
