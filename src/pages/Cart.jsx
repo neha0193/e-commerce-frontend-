@@ -37,7 +37,7 @@ const Cart = () => {
           );
           return (
             <div
-              key={index}
+              key={`${item._id}-${item.size}`}
               className="py-4 border-t text-gray-700 grid grid-cols-[4fr_0.5fr_0.5fr] sm:grid-cols-[4fr_2fr_0.5fr] items-center gap-4"
             >
               <div className="flex items-start gap-6">
@@ -63,7 +63,7 @@ const Cart = () => {
               <input
                 type="number"
                 min={1}
-                defaultValue={item.quantity}
+                Value={item.quantity}
                 className="border max-w-10 sm:max-w-20 px-1 sm:px-2 py-1"
                 onChange={(e) =>
                   e.target.value === "0" || e.target.value === ""

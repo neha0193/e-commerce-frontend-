@@ -51,9 +51,19 @@ const ShopContextProvider = (props) => {
   };
 
   // update quantity function ...
-  const updateQuantity = async (itemId, size, quantity) => {
-    let cartData = structuredClone(cartItems);
+  const updateQuantity =  (itemId, size, quantity) => {
+    const cartData = structuredClone(cartItems);
+    if (quantity <= 0) {
+    if (cartData[itemId]) {
+      delete cartData[itemId][size];
+      if (Object.keys(cartData[itemId]).length === 0) {
+        delete cartData[itemId];
+      }
+    }
+  } else {
+    if (!cartData[itemId]) cartData[itemId] = {};
     cartData[itemId][size] = quantity;
+  }
     setCartItems(cartData);
   };
 

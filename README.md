@@ -2,7 +2,7 @@
 
 This is a sample **e-commerce site** built using React and Tailwind CSS.  
 The project includes routing, global context, reusable components, and product sections.  
-
+~
 ---
 
 ## ✅ What We Did
