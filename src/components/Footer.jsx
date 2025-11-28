@@ -16,17 +16,17 @@ const Footer = () => {
         <div className="">
           <p className="text-xl font-medium mb-5">COMPANY</p>
           <ul className="flex flex-col gap-1 text-gray-600">
-            <Link to="/">
-              <li>Home</li>
-            </Link>
-            <Link to="/about">
+            <li>
+              <Link to="/"  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} >Home</Link>
+            </li>
+            <Link to="/about" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
               <li>About us</li>
             </Link>
             <li>Delivery</li>
             <li>Privacy policy</li>
           </ul>
         </div>
-        <div className="">
+        <div>
           <p className="text-xl font-medium mb-5">GET IN TOUCH</p>
           <ul className="flex flex-col gap-1 text-gray-600">
             <li>+91 9999999999</li>
@@ -34,7 +34,7 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <div className="">
+      <div>
         <hr />
         <p className="py-5 text-sm text-center">
           Copyright 2025@ paridhan.com - All Right Reserved
