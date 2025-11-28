@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-import { assets } from "../assets/assets";
+import { assets } from "../assets/assets"; // for images in assets.js file
 import { useContext, useState } from "react";
 import { ShopContext } from "../context/ShopContext";
 
@@ -13,39 +13,27 @@ const Navbar = () => {
         <img src={assets.new_logo} alt="logo" className="w-36" />
       </Link>
 
-      {/* Desktop Navigation */}
+      {/* desktop navigation */}
       <ul className="hidden sm:flex gap-8 text-sm text-gray-700">
-        <NavLink
-          to="/"
-          className="flex flex-col items-center gap-1 relative group"
-        >
+        <NavLink to="/" className="flex flex-col items-center gap-1 ">
           <p className="hover:text-black">HOME</p>
-          <hr className="w-1/2 h-[1.5px] bg-gray-700 hidden group-hover:block" />
+          <hr className="w-1/2 h-[1.5px] bg-gray-700 hidden " />
         </NavLink>
-        <NavLink
-          to="/collection"
-          className="flex flex-col items-center gap-1 relative group"
-        >
+        <NavLink to="/collection" className="flex flex-col items-center gap-1 ">
           <p className="hover:text-black">COLLECTION</p>
-          <hr className="w-1/2 h-[1.5px] bg-gray-700 hidden group-hover:block" />
+          <hr className="w-1/2 h-[1.5px] bg-gray-700 hidden " />
         </NavLink>
-        <NavLink
-          to="/about"
-          className="flex flex-col items-center gap-1 relative group"
-        >
+        <NavLink to="/about" className="flex flex-col items-center gap-1 ">
           <p className="hover:text-black">ABOUT</p>
-          <hr className="w-1/2 h-[1.5px] bg-gray-700 hidden group-hover:block" />
+          <hr className="w-1/2 h-[1.5px] bg-gray-700 hidden " />
         </NavLink>
-        <NavLink
-          to="/contact"
-          className="flex flex-col items-center gap-1 relative group"
-        >
+        <NavLink to="/contact" className="flex flex-col items-center gap-1 ">
           <p className="hover:text-black">CONTACT</p>
-          <hr className="w-1/2 h-[1.5px] bg-gray-700 hidden group-hover:block" />
+          <hr className="w-1/2 h-[1.5px] bg-gray-700 hidden " />
         </NavLink>
       </ul>
 
-      {/* Right Icons */}
+      {/* right icons */}
       <div className="flex items-center gap-6">
         <Link to="/collection">
           <img
@@ -56,15 +44,14 @@ const Navbar = () => {
           />
         </Link>
 
-        {/* Profile Dropdown */}
-        <div className="relative group">
-          <Link to="/login">
-            <img
-              src={assets.profile_icon}
-              alt="profile_icon"
-              className="w-5 cursor-pointer"
-            />
-          </Link>
+        <Link to="/login" className="relative group">
+          <img
+            src={assets.profile_icon}
+            alt="profile_icon"
+            className="w-5 cursor-pointer"
+          />
+
+          {/* profile dropdown */}
           <div className="absolute right-0 top-full mt-2 hidden group-hover:block">
             <div className="flex flex-col w-36 gap-2 py-3 px-5 bg-slate-100 text-gray-500 rounded shadow-md">
               <p className="cursor-pointer hover:text-black">My Profile</p>
@@ -72,9 +59,9 @@ const Navbar = () => {
               <p className="cursor-pointer hover:text-black">Logout</p>
             </div>
           </div>
-        </div>
+        </Link>
 
-        {/* Cart Icon */}
+        {/* cart icon */}
         <Link to="/cart" className="relative">
           <img src={assets.cart_icon} alt="cart-icon" className="w-5" />
           <span className="absolute -right-1 -bottom-1 w-4 h-4 flex items-center justify-center bg-black text-white text-[8px] rounded-full">
@@ -82,7 +69,7 @@ const Navbar = () => {
           </span>
         </Link>
 
-        {/* Mobile Menu Icon */}
+        {/* mobile menu icon */}
         <img
           src={assets.menu_icon}
           alt="menu-icon"
@@ -91,10 +78,10 @@ const Navbar = () => {
         />
       </div>
 
-      {/* Mobile Sidebar */}
+      {/* mobile sidebar menu*/}
       <div
         className={`fixed top-0 right-0 bottom-0 overflow-hidden  transition-all bg-gray-100 z-50 ${
-          visible ? "w-64" : "w-0"
+          visible ? "w-1/2" : "w-0"
         }`}
       >
         <div className="flex flex-col h-full text-gray-600">
@@ -147,3 +134,7 @@ const Navbar = () => {
 };
 
 export default Navbar;
+// created a div with items flex
+// first is logo second is flex of some important pages as a list
+// third is flex of some icons which is search and profile icon and cart icon and menu icon for mobile only 
+// also last div for phone navbar

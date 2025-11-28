@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router-dom";
+import { ToastContainer } from 'react-toastify';
 import Home from "./pages/Home"
 import Collection from "./pages/Collections"
 import About from "./pages/About"
@@ -11,7 +12,6 @@ import Orders from "./pages/Orders"
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer";
 import SearchBar from "./components/SearchBar";
-import { ToastContainer } from 'react-toastify';
 
 const App = () => {
   return (
@@ -20,6 +20,7 @@ const App = () => {
       <Navbar/>
       <SearchBar/>
       <Routes>
+        {/* created 9 routes for all the pages  */}
         <Route path="/" element={<Home />}></Route>
         <Route path="/collection" element={<Collection />}></Route>
         <Route path="/about" element={<About />}></Route>

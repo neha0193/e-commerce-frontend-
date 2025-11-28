@@ -5,13 +5,12 @@ import ProductItem from "./ProductItem";
 
 const LatestCollection = () => {
   const { products } = useContext(ShopContext);
-  // console.log (products)
+  // console.log (products) // to check weather we are getting the products data or not 
   const [latestProducts,setLatestProducts]= useState([]);
 
   useEffect(()=>{
     setLatestProducts(products.slice(0,10))
   },[])
-  
 
   return (
     <div className="my-10">
@@ -19,9 +18,6 @@ const LatestCollection = () => {
         <Title text1={"LATEST"} text2={"COLLECTION"} />
         <p className="w-3/4 m-auto text-xs sm:text-sm md:text-base text-gray-600">
           Discover our latest collection, crafted with a perfect blend of style and comfort.
-          {/*  From timeless essentials to modern trends, each piece is
-          designed to elevate your wardrobe and make every occasion special.
-          Shop now and redefine your look with our new arrivals. */}
         </p>
       </div>
 

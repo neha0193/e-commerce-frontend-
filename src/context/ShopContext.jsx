@@ -32,6 +32,10 @@ const ShopContextProvider = (props) => {
       cartData[itemId][size] = 1;
     }
     setCartItems(cartData);
+    toast.success("Item added to cart 🛒", {
+      position: "bottom-right",
+      autoClose: 1500,
+    });
   };
 
   // get cart count > total no of items a person added in the cart
@@ -51,19 +55,19 @@ const ShopContextProvider = (props) => {
   };
 
   // update quantity function ...
-  const updateQuantity =  (itemId, size, quantity) => {
+  const updateQuantity = (itemId, size, quantity) => {
     const cartData = structuredClone(cartItems);
     if (quantity <= 0) {
-    if (cartData[itemId]) {
-      delete cartData[itemId][size];
-      if (Object.keys(cartData[itemId]).length === 0) {
-        delete cartData[itemId];
+      if (cartData[itemId]) {
+        delete cartData[itemId][size];
+        if (Object.keys(cartData[itemId]).length === 0) {
+          delete cartData[itemId];
+        }
       }
+    } else {
+      if (!cartData[itemId]) cartData[itemId] = {};
+      cartData[itemId][size] = quantity;
     }
-  } else {
-    if (!cartData[itemId]) cartData[itemId] = {};
-    cartData[itemId][size] = quantity;
-  }
     setCartItems(cartData);
   };
 

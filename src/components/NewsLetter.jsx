@@ -1,8 +1,12 @@
+import { toast } from "react-toastify";
 
 const NewsLetter = () => {
 
   const onSubmitHandler = (e) =>{
     e.preventDefault();
+    toast.success("Subscribed Successfully! 🎉", {
+      position: "top-center",
+      autoClose: 2000,})
   }
   return (
     <div className="text-center ">
